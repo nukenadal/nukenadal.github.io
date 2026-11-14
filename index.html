@@ -210,6 +210,8 @@
     object-fit: contain;
     margin: 0 auto;
   }
+  .work-fig.toc img { max-height: 280px; }
+  .work-fig.cover img { max-height: 400px; }
   .fig-pending-label { display: none; }
   .work-fig.fig-pending { min-height: 170px; }
   .work-fig.fig-pending .fig-pending-label {
@@ -278,15 +280,21 @@
   body { background: #5b9cf3; }
   body::before {
     content: ""; position: fixed; inset: 0; z-index: -1;
-    background:
+    background-color: #1687d0;
+    background-image:
       linear-gradient(90deg, rgba(10,32,72,0.38) 0%, rgba(10,32,72,0.16) 50%, rgba(10,32,72,0) 85%),
-      url("bg-sky.jpg") right top / cover no-repeat;
+      url("bg-sky.jpg");
+    background-position: center, right center;
+    background-size: 100% 100%, auto 100%;
+    background-repeat: no-repeat;
   }
   @media (orientation: portrait) {
     body::before {
-      background:
+      background-image:
         linear-gradient(90deg, rgba(10,32,72,0.40) 0%, rgba(10,32,72,0.20) 60%, rgba(10,32,72,0.08) 100%),
-        url("bg-sky-portrait.jpg") 30% top / cover no-repeat;
+        url("bg-sky-portrait.jpg");
+      background-position: center, center center;
+      background-size: 100% 100%, auto 100%;
     }
   }
   nav ul { gap: 2rem; }
@@ -393,7 +401,7 @@
     <div class="sec-header">Selected research</div>
     <p class="work-intro">Three publications from my doctoral research at Imperial College London, exploring structural dynamics, phase stability and emergent disorder in metal halide perovskites. For my full publication record, see <a href="https://scholar.google.com/citations?user=H_WhefEAAAAJ&hl=en&sortby=pubdate" target="_blank" rel="noopener noreferrer">Google Scholar</a>.</p>
 <article class="work-card featured" id="jacs">
-<div class="work-fig">
+<div class="work-fig toc">
   <img src="jacs-toc.png" alt="TOC graphic for the JACS paper on kinetically arrested twin domains" loading="lazy" onerror="this.closest('.work-fig').classList.add('fig-pending'); this.remove();">
   <span class="fig-pending-label"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5"/><circle cx="5.5" cy="6" r="1.2"/><path d="M2 11l3.5-3 3 2.5L11 7l3 3.5"/></svg>jacs-toc.png · image coming soon</span>
 </div>
@@ -406,7 +414,7 @@
 <p class="work-desc">Large-scale machine-learning molecular dynamics reveals a history-dependent, kinetically arrested twin-domain state in formamidinium lead iodide (FAPbI₃). Coupled octahedral tilting and molecular reorientation govern the emergence of this low-temperature structure, with signatures in diffuse scattering, vibrational response and electronic disorder.</p>
 <div class="work-links"><a class="work-link" href="https://doi.org/10.1021/jacs.6c09938" target="_blank" rel="noopener noreferrer">Read the paper &rarr;</a></div>
 </div></article><article class="work-card" id="cm">
-<div class="work-fig">
+<div class="work-fig cover">
   <img src="cm-cover.jpg" alt="Chemistry of Materials front cover featuring phase stability and transformations in mixed-halide perovskites" loading="lazy" onerror="this.closest('.work-fig').classList.add('fig-pending'); this.remove();">
   <span class="fig-pending-label"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5"/><circle cx="5.5" cy="6" r="1.2"/><path d="M2 11l3.5-3 3 2.5L11 7l3 3.5"/></svg>cm-cover.jpg · image coming soon</span>
 </div>
@@ -419,7 +427,7 @@
 <p class="work-desc">We combine on-the-fly machine-learning force-field development, large-scale molecular dynamics and PDynA structural analysis to map phase stability in mixed-halide perovskites. The results show how A-site cations, halide composition and local segregation reshape octahedral-tilt correlations and phase-transformation pathways.</p>
 <div class="work-links"><a class="work-link" href="https://doi.org/10.1021/acs.chemmater.5c01730" target="_blank" rel="noopener noreferrer">Read the paper &rarr;</a></div>
 </div></article><article class="work-card" id="jpcc">
-<div class="work-fig">
+<div class="work-fig cover">
   <img src="jpcc-cover.jpg" alt="Journal of Physical Chemistry C front cover for Structural Dynamics Descriptors for Metal Halide Perovskites" loading="lazy" onerror="this.closest('.work-fig').classList.add('fig-pending'); this.remove();">
   <span class="fig-pending-label"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5"/><circle cx="5.5" cy="6" r="1.2"/><path d="M2 11l3.5-3 3 2.5L11 7l3 3.5"/></svg>jpcc-cover.jpg · image coming soon</span>
 </div>
