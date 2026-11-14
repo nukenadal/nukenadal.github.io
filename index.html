@@ -210,14 +210,14 @@
     object-fit: contain;
     margin: 0 auto;
   }
-  .work-fig.toc img { max-height: 360px; }
-  .work-fig.cover img { max-height: 400px; }
+  .work-fig.toc img { max-height: 420px; }
+  .work-fig.cover img { max-height: 600px; }
 
   /* Portrait cover articles: text left, cover art right. */
   @media (min-width: 701px) {
     .work-card.cover-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 240px;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
       grid-template-areas: "content figure";
       align-items: stretch;
     }
