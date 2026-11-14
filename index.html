@@ -73,14 +73,21 @@
   }
   .contact-links a:hover { border-color: var(--accent-mid); color: var(--accent); }
   .avatar-ring {
-    width: 110px; height: 110px; border-radius: 50%;
-    border: 2px solid var(--blue-line);
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.95);
     overflow: hidden;
     flex-shrink: 0;
-    background: var(--accent-light);
+    background: #ffffff;
+    box-shadow: 0 6px 24px rgba(8,28,64,0.25);
   }
+
   .avatar-ring img {
-    width: 100%; height: 100%; object-fit: cover; object-position: center top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
     display: block;
   }
 
@@ -187,12 +194,22 @@
   }
   .work-card:hover { border-color: var(--blue-line); box-shadow: 0 3px 18px rgba(26,74,138,0.07); }
   .work-fig {
-    position: relative; background: var(--accent-light);
-    border-bottom: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: center;
-    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: var(--accent-light);
   }
-  .work-fig img { display: block; width: 100%; height: auto; }
+
+  .work-fig img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 380px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+  }
   .fig-pending-label { display: none; }
   .work-fig.fig-pending { min-height: 170px; }
   .work-fig.fig-pending .fig-pending-label {
@@ -341,7 +358,7 @@
       </div>
     </div>
     <!-- Upload profile.png to replace the initials with your portrait. -->
-    <div class="avatar-ring"><span class="avatar-initials" aria-hidden="true">XL</span><img src="profile.png" alt="Portrait of Xia Liang" onerror="this.remove();"></div>
+    <div class="avatar-ring"><img src="profile.png" alt="Portrait of Xia Liang"></div>
   </div></div>
   <div class="sheet">
   <section id="about">
