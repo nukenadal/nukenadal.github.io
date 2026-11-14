@@ -197,21 +197,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 24px;
+    padding: 0;
+    overflow: hidden;
     background: var(--accent-light);
   }
 
   .work-fig img {
     display: block;
-    width: auto;
-    max-width: 100%;
-    max-height: 380px;
+    width: 100%;
     height: auto;
+    max-height: none;
     object-fit: contain;
-    margin: 0 auto;
+    margin: 0;
   }
-  .work-fig.toc img { max-height: 420px; }
-  .work-fig.cover img { max-height: 600px; }
 
   /* Portrait cover articles: text left, cover art right. */
   @media (min-width: 701px) {
@@ -227,11 +225,13 @@
     }
     .work-card.cover-layout .work-fig {
       grid-area: figure;
-      padding: 16px;
+      padding: 0;
     }
     .work-card.cover-layout .work-fig img {
-      max-width: 100%;
-      max-height: 400px;
+      width: 100%;
+      height: auto;
+      max-height: none;
+      object-fit: contain;
     }
   }
 
